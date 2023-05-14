@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--ctrl+shft+b-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <title>The Tunnel Bar Saranda Contact</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <div id="navLogo">
+        <a href="index.html"><img id="logo" src="LogoBlackBG.png" alt="Tunnel Bar Sarandë"></a>
+        <p id="openDisplay"></p>
+      </div>
+      <nav id="topNav">
+        <button id="navToggle" onclick="menuToggle()">
+          <span class="toggleLine"></span>
+          <span class="toggleLine"></span>
+          <span class="toggleLine"></span>
+        </button>
+        <ul id="navList">
+          <li id="menuNav" class="navTab">Menu
+            <ul id="menus">
+              <li><a class="navTab" href="drinks.html">Drinks</a></li>
+              <li><a class="navTab" href="food.html">Food</a></li>
+            </ul>
+          </li>
+          <li><a class="navTab" href="specials.html">Specials</a></li>
+          <li><a class="navTab active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header> 
+    <main>
+      <p id="phoneNumber">
+        ☏ +355 69 333 4588
+      </p>
+      <!--Make clickable? a href="tel:+355693334588"-->
+      <a id="fbIcon" href="https://www.facebook.com/thetunnelbarsaranda"><span class="fa fa-facebook"></span></a>
+      <address>
+        V2F7+3QP<br>
+        Rruga 40 Shenjtorët<br>
+        Sarandë, Albania
+      </address>
+      <div id="googleMap">
+      </div>
+    </main>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXG2hMWQ8bgqb0_zpKgXKI-tyc9S1MlB0&libraries=places&callback=googleMap"></script>
+<script src="index.js"></script>
+</html>
+

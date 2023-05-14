@@ -1,0 +1,256 @@
+<!DOCTYPE html><!--ctrl+shft+b-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <title>The Tunnel Bar Saranda Food</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+        <div id="navLogo">
+          <a href="index.html"><img id="logo" src="LogoBlackBG.png" alt="Tunnel Bar Sarandë"></a>
+          <p id="openDisplay"></p>
+        </div>
+        <nav id="topNav">
+            <button id="navToggle">
+                <span class="toggleLine"></span>
+                <span class="toggleLine"></span>
+                <span class="toggleLine"></span>
+            </button>
+            <ul id="navList">
+                <li id="menuNav" class="navTab active">Menu
+                  <ul id="menus">
+                    <li><a class="navTab" href="drinks.html">Drinks</a></li>
+                    <li><a class="navTab active" href="food.html">Food</a></li>
+                  </ul>
+                </li>
+                <li><a class="navTab" href="specials.html">Specials</a></li>
+                <li><a class="navTab" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+      </header>  
+    <main>
+        <form id="currencySelect"><!--🇦🇱 🇬🇧 🇦🇺 🇺🇸 🇪🇺-->
+            <input id="EUR" name="currency" type="radio" value="EUR" oninput="convertLeke('EUR')">
+            <label for="EUR">🇪🇺 €</label>
+            <input id="GBP" name="currency" type="radio" value="GBP" oninput="convertLeke('GBP')">
+            <label for="GBP">🇬🇧 £</label>
+            <input id="AUD" name="currency" type="radio" value="AUD" oninput="convertLeke('AUD')">
+            <label for="AUD">🇦🇺 $</label>
+        </form>
+        <h2 class="menuSecName">SIDES</h2>
+        <ul class="menuSec">
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Fries photo" onclick="imgPopup('foodTest.jpg')">
+                <div class="menuText">
+                    <h3 class="menuName">Fries</h3>
+                    <p class="menuDes">
+                        [cut style? Home-cut?]
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">300 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Dirty fries photo" onclick="imgPopup('foodTest.jpg')">
+                <div class="menuText">
+                    <h3 class="menuName">Dirty Fries</h3>
+                    <p class="menuDes">
+                        [...probably not poutine]
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">450 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Onion rings photo" onclick="imgPopup('foodTest.jpg')">
+                <div class="menuText">
+                    <h3 class="menuName">Onion Rings</h3>
+                    <p class="menuDes">
+                        [Cut and battered in-house?]
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">350 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Wings photo" onclick="imgPopup('foodTest.jpg')">
+                <div class="menuText">
+                    <h3 class="menuName">Wings</h3>
+                    <p class="menuDes">
+                        6 pieces of [bbq? honey garlic?]-glazed chicken wings
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">500 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <h2 class="menuSecName">BURGERS</h2>
+        <ul class="menuSec">
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Tunnel burger photo" onclick="imgPopup('foodTest.jpg')">
+                <div class="menuText">
+                    <h3 class="menuName">The Tunnel Burger</h3>
+                    <p class="menuDes">
+                        Lettuce, onion, tomato, pickles, BBQ sauce, and fries
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">700 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Troll of the tunnel burger photo" onclick="imgPopup('foodTest.jpg')">
+                <div class="menuText">
+                    <h3 class="menuName">Troll of the Tunnel Burger</h3>
+                    <p class="menuDes">
+                        2 patties, lettuce, onion, tomato, pickles, BBQ sauce, cheese, bacon, and fries
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">1100 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Classic chicken burger photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <div class="menuText"><h3 class="menuName">Classic Chicken Burger</h3>
+                    <p class="menuDes">
+                        Chicken pattie with coleslaw and fries
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">650 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Very veggie burger photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Very Veggie Burger</h3>
+                    <p class="menuDes">
+                        [vegetarian pattie?] lettuce, onion, tomato, and fries
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">600 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <h2 class="menuSecName">OTHER MEALS </h2>
+        <ul class="menuSec">
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="BBQ pulled-pork sandwich photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">BBQ Pulled-Pork Sandwich</h3>
+                    <p class="menuDes">
+                        Slow cooked BBQ pulled pork sandwich with fries and coleslaw
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">650 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Fish and chips photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Fish & Chips</h3>
+                    <p class="menuDes">
+                        Beer-battered fish and chips with tartar sauce and lemon
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">850 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Crispy chicken schnitzel photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Crispy Chicken Schnitzel</h3>
+                    <p class="menuDes">
+                        Chicken schnitzel with fries and a side salad
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">750 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Cheesy chicken parmesean photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Cheesy Chicken Parm</h3>
+                    <p class="menuDes">
+                        [Breaded?] chicken breast in tomato sauce topped with [parmesan?] with fries and a side salad
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">800 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Qofte photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Quofte</h3>
+                    <p class="menuDes">
+                        Albanian [meatballs?] with fries and a side salad
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">700 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Eggplant parmesean photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Eggplant Parm</h3>
+                    <p class="menuDes">
+                        [baked?] eggplant in tomato sauce with fries and a side salad
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">700 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuItem">
+                <img class="menuImg" src="foodTest.jpg" alt="Fried vegetables in tomato sauce photo" onclick="imgPopup('LogoBlackBG.png')">
+                <div class="menuText">
+                    <h3 class="menuName">Fried Veggies in Tomato Sauce</h3>
+                    <p class="menuDes">
+                        Fried vegetables in tomato sauce and garlic [kos? tf?]
+                    </p>
+                    <ul class="menuPrices">
+                        <li><p class="menuPrice">600 lekë</p></li>
+                        <li><p class="convertPrice"></p></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
+
