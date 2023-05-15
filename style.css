@@ -411,7 +411,8 @@ main{
     float:left;
 }
 .sDes{
-    
+    text-align:justify;
+    padding-left:70px;
 }
 .sDate{
     text-align:right;
@@ -445,6 +446,12 @@ main{
     width:100%;
     position:relative;
     bottom:26px;
+}
+#closedSpecial th{
+    font-size:30px;
+}
+#closedSpecial th p{
+    margin:0;
 }
 
 
@@ -539,11 +546,17 @@ main{
     .sImg{
         display:block;
     }
+    .sDes{
+        text-align:center;
+    }
 }
 
 @media only screen and (max-width:420px){
     .sImg{
         float:none;
         margin:auto;
+    }
+    .sDes{
+        padding-left:0;
     }
 }
