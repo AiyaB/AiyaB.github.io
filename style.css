@@ -114,7 +114,7 @@ main{
     background-color:hsl(185, 100%, 98%);
     margin:20px auto;
     text-align:center;
-    padding-bottom:10px;
+    padding:10px 0;
     width:90vw;
     max-width:900px;
     color:black;
