@@ -453,6 +453,12 @@ main{
 #closedSpecial th p{
     margin:0;
 }
+#closedSpecial td h3{
+    font-size:30px;
+    margin:5px 10px;
+    text-align:left;
+    float:left;
+}
 
 
 /*Contact*/
