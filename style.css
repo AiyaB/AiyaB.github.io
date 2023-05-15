@@ -402,6 +402,9 @@ main{
 #specials tr:nth-of-type(6) td{
     border-left:8px solid hsl(355, 82%, 60%);
 }
+#specials tr:nth-of-type(odd) td{
+    background-color:hsl(194, 13%, 80%);
+}
 .sEvent{
     margin:0;
 
