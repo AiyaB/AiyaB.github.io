@@ -116,7 +116,7 @@ async function googleMap(){
             let tunnelInfo=
 "<div id='content'>"+
     "<h2>The Tunnel Bar</h2>"+
-    "<a target='_blank' style='font-size:18px;outline:none' href='https://www.google.com/maps/dir//V2F7%2B3QP+The+Tunnel+Bar,+Rruga+40+Shenjtor%C3%ABt,+Sarand%C3%AB,+Albania/@39.872702,19.9732428,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x135b150be8beb6bd:0xac098e111081f181!2m2!1d20.0144423!2d39.8727093!3e2'>"+
+    "<a target='_blank' style='font-size:18px;outline:none' href='https://www.google.com/maps/dir//V2F7%2B3QP+The+Tunnel+Bar,+Rruga+40+Shenjtor%C3%ABt,+Sarand%C3%AB,+Albania/@39.872702,19.9732428,14.5z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x135b150be8beb6bd:0xac098e111081f181!2m2!1d20.0144423!2d39.8727093!3e2'>"+
         "<img src='directionsSymbol.png' style='width:18px;position:relative;top:5px;right:2px;background-color:hsl(214, 82%, 51%);border-radius:50%;padding:2px'>"+
         "Directions</a>"+
     "<div id='mapRating' style='font-size:16px;color:hsl(210, 4%, 44%)'>"+
