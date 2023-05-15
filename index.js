@@ -263,7 +263,9 @@ function specialsDates(){
     }
     else{
         dateCount=dateCount=currentDate-currentDay-4;//last week's
-        monthCount--;
+        if(dateCount<1){
+            monthCount--;
+        }
         if(monthCount==0){
             monthCount=12;
         }
