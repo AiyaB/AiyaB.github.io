@@ -508,8 +508,8 @@ main{
         padding:10px 0;
     }
     #menus{
-        top:-2px;
-        right:113px;
+        margin-right:113px;
+        margin-top:-49px;
     }
 
     /*menu*/
