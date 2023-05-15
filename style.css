@@ -488,7 +488,7 @@ main{
     }
     #topNav{
         margin-left:auto;
-        width:fit-content;
+        width:113px;
         display:flex;
         flex-direction: column;
     }
@@ -508,7 +508,7 @@ main{
         padding:10px 0;
     }
     #menus{
-        margin-right:100px;
+        margin-right:113px;
         margin-top:-49px;
     }
 
