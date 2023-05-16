@@ -49,12 +49,12 @@ function menuToggle(){
     let toggle=document.getElementById("navToggle");
     let menu=document.getElementById("navList");
     toggle.onclick=function(){
-        if(menu.style.display=="block"){
-            menu.style.display="none";
+        if(menu.style.display=="flex"){
+            menu.style.display=null;
             toggle.style.backgroundColor="hsl(220, 1%, 52%)";
         }
         else{
-            menu.style.display="block";
+            menu.style.display="flex";
             toggle.style.backgroundColor="hsl(215, 38%, 9%)";
         }
     }
