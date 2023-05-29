@@ -137,9 +137,6 @@ async function googleMap(){
             map.setCenter(results[0].geometry.location);
         }
     });
-
-
-    
 }
 googleMap();
 
@@ -244,8 +241,6 @@ if(isHappyHour()){
 
 
 //Specials
-
-//highlight current day's hours
 function specialsDates(){
     getTimes();
     
@@ -350,3 +345,45 @@ function specialsDates(){
     }
 }
 specialsDates();
+
+
+//Delivery
+function updateTotal(){
+    let counts=document.getElementsByClassName("orderCount");
+    let prices=document.getElementsByClassName("orderPrice");
+    let total=0;
+    for(let i=0;i<counts.length;i++){
+        total+=counts[i].value*(parseInt(prices[i].innerHTML));
+    }//(parseInt(menuPrices[i].innerHTML)*exchange).toFixed(2);
+    document.getElementById("totalPrice").innerHTML=total;
+}
+function submitDelivery(event){
+    event.preventDefault();
+    let form=document.getElementById("orderForm");
+    let formData=new FormData(form);
+    fetch("https://europe-central2-aiyabowman.cloudfunctions.net/order-form",{
+        method:"POST",
+        body:formData
+    })/*.then(response=>{
+        if(!response.ok){
+            throw new Error("error returned");
+        }
+        return response.json();
+    }).then((resp)=>{
+        let orderSuccess=document.getElementById("orderSuccess");
+        orderSuccess.innerHTML=resp;
+    }).catch((error)=>{
+        orderSuccess.innerHTML="order failed, please try again";
+        console.log("Error:",error);
+    })*/
+}
+function submitDelivery(event){
+    console.log("Thingy:");
+}
+if(document.getElementById("orderForm")){
+    document.getElementById("orderForm").addEventListener("submit", submitDelivery);
+    let counts=document.getElementsByClassName("orderCount");
+    for(let i=0;i<counts.length;i++){
+        counts[i].addEventListener("change", updateTotal);
+    }
+}
