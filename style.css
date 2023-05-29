@@ -302,7 +302,7 @@ main{
 }
 .happyPrice, .happyConvert{
     margin:0;
-    color:red;
+    color:hsl(355, 82%, 60%);
     width:fit-content;
     display:none;
 }
@@ -355,7 +355,6 @@ main{
     width:585px;
 }
 #specials td{
-    
     padding:10px;
 }
 #specials th{
@@ -482,6 +481,49 @@ main{
 }
 
 
+/*Delivery*/
+#deliveryInfo{
+    width:80%;
+    margin:auto;
+}
+#orderForm{
+    width:80%;
+    margin:auto;
+}
+#ordererInfo label{
+    display:block;
+    text-align:left;
+}
+#ordererInfo input{
+    display:block;
+    width:200px;
+    margin:0 0 10px 0;
+}
+#orderTable{
+
+}
+#orderForm label{
+    display:block;
+    text-align:left;
+}
+#orderForm textarea{
+    display:block;
+}
+#orderTotal{
+    text-align:left;
+    padding-left:40px;
+}
+#orderSuccess{
+    height:34px;
+    width:100%;
+    display:block;
+    overflow:hidden;
+    border:none;
+}
+#orderForm input[type=submit]{
+    display:block;
+}
+
 @media only screen and (max-width:650px){
     header{
         height:88.6px;
@@ -506,6 +548,7 @@ main{
     }
     #menuNav{
         padding:10px 0;
+        
     }
     #menus{
         margin-right:113px;
