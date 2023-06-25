@@ -490,15 +490,20 @@ brown: hsl(25, 80%, 41%) #bc5b15
 #specials{
     border-collapse:collapse;
     margin:auto;
-    width:585px;
+    max-width:585px;
+    width:100%;
 }
 #specials td{
     padding:10px;
+    position:relative;
 }
 #specials th{
     width:140px;
     padding:10px;
     color:white;
+}
+#specials tr:nth-of-type(odd){
+    background-color:hsl(194, 13%, 80%);
 }
 #specials tr:nth-of-type(1) th{
     background-color:hsl(0, 0%, 20%);
@@ -542,17 +547,18 @@ brown: hsl(25, 80%, 41%) #bc5b15
 #specials tr:nth-of-type(7) td{
     border-left:8px solid hsl(355, 82%, 60%);
 }
-#specials tr:nth-of-type(odd) td{
-    background-color:hsl(194, 13%, 80%);
-}
 .sEvent{
     margin:0;
 }
 .sImg{
     width:65px;
     float:left;
-    position:relative;
-    bottom:11px;
+    margin: 0;
+    position: absolute;
+    top:50%;
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%);
+    left:5px;
 }
 .sDes{
     text-align:left;
@@ -567,28 +573,23 @@ brown: hsl(25, 80%, 41%) #bc5b15
     margin:0;
     font-size:40px;
 }
-.sMonth{
-    float:right;
-    text-align:right;
-    margin:0;
-    width:100%;
-    position:relative;
-    bottom:26px;
+@media only screen and (max-width:390px){
+    .sDay{
+        font-size:20px;
+        width:50%;
+    }
+    #specials th{
+        width:50%;
+        padding:10px;
+        color:white;
+    }
+    .sImg{
+        width:40px;
+    }
+    .sDes{
+        padding-left:40px;
+    }
 }
-#closedSpecial th{
-    font-size:30px;
-}
-#closedSpecial th p{
-    margin:0;
-}
-#closedSpecial td h3{
-    font-size:30px;
-    margin:5px 10px;
-    text-align:left;
-    float:left;
-}
-
-
 
 /*Contact*/
 #fbIcon{
