@@ -424,7 +424,7 @@ function downMonth(){
 
 
 //document.getElementById("bookingSubmit").addEventListener("click",getResponse);
-function resetForm(){
+function resetForm(){//ONLY RESET IF FORM SUCCESSFUL
     setTimeout(function(){
         document.getElementById("bookingForm").reset();
         if(document.getElementById("bookingInfo")){
@@ -434,6 +434,54 @@ function resetForm(){
         resetHighlights();
     },2000);
 }
+
+if(document.getElementById("bookingForm")){
+    let form=document.getElementById("bookingForm");
+    form.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        console.log("submitting form");
+        fetch(event.target.action,{
+            method:'POST',
+            body:new URLSearchParams(new FormData(event.target))
+        }).then((response)=>{
+            if(!response.ok){
+                console.log("fuck.");
+            }
+            console.log(response.text());//whatever's sent back
+        }).then((body)=>{
+            console.log("do body stuff");
+        }).catch((error)=>{
+            console.log("deal with error");
+        });
+    });
+}
+function sendForm(){
+    /*let formData=new FormData(document.getElementById("bookingForm"));
+    formData.onsubmit=async(e)=>{
+        e.preventDefault();
+        let response=await fetch("https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit",{
+            method:'POST',
+            body: new FormData(formData)
+        });
+        let result=await response.json();
+        alert(result.message);
+    }*/
+    /*let form=document.getElementById("bookingForm");
+    form.action="https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit";
+    console.log(form.submit());
+    form.action="";*/
+    
+    /*let request=new XMLHttpRequest();
+    request.open("POST","https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit");
+    request.onload=function(event){
+        alert("Response: "+event.target.response);
+    }
+    let formData=new FormData(document.getElementById("bookingForm"));
+    request.send(formData);*/
+}
+
+
+
 
 
 async function googleMap(){
