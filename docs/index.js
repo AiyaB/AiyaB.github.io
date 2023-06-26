@@ -451,6 +451,7 @@ if(document.getElementById("bookingForm")){
             //console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
             response.json().then(function(obj){
                 bookingResponse=obj.message;
+                console.log("response now "+bookingResponse);
             });
         }).then((body)=>{
         }).catch((error)=>{
