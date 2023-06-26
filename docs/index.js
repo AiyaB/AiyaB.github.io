@@ -452,16 +452,16 @@ if(document.getElementById("bookingForm")){
             response.json().then(function(obj){
                 bookingResponse=obj.message;
                 console.log("response now "+bookingResponse);
+                let messageDisplay=document.getElementById("bookingResponse");
+                messageDisplay.innerHTML=bookingResponse;
+                if(bookingResponse=="We have successfully sent your booking request"){
+                    form.reset();
+                }
+                messageDisplay.style.display="block";
             });
         }).then((body)=>{
         }).catch((error)=>{
         });
-        let messageDisplay=document.getElementById("bookingResponse");
-        messageDisplay.innerHTML=bookingResponse;
-        if(bookingResponse=="We have successfully sent your booking request"){
-            form.reset();
-        }
-        messageDisplay.style.display="block";
     });
 }
 
