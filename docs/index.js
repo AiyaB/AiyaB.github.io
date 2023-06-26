@@ -447,11 +447,11 @@ if(document.getElementById("bookingForm")){
             if(!response.ok){
                 console.log("fuck.");
             }
-            console.log(response);//whatever's sent back
+            console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
         }).then((body)=>{
-            console.log(body);
+
         }).catch((error)=>{
-            console.log("Error:"+error);
+
         });
     });
 }
