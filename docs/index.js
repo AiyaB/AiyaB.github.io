@@ -449,38 +449,12 @@ if(document.getElementById("bookingForm")){
             }
             console.log(response.text());//whatever's sent back
         }).then((body)=>{
-            console.log("do body stuff");
+            console.log(body);
         }).catch((error)=>{
-            console.log("deal with error");
+            console.log("Error:"+error);
         });
     });
 }
-function sendForm(){
-    /*let formData=new FormData(document.getElementById("bookingForm"));
-    formData.onsubmit=async(e)=>{
-        e.preventDefault();
-        let response=await fetch("https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit",{
-            method:'POST',
-            body: new FormData(formData)
-        });
-        let result=await response.json();
-        alert(result.message);
-    }*/
-    /*let form=document.getElementById("bookingForm");
-    form.action="https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit";
-    console.log(form.submit());
-    form.action="";*/
-    
-    /*let request=new XMLHttpRequest();
-    request.open("POST","https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit");
-    request.onload=function(event){
-        alert("Response: "+event.target.response);
-    }
-    let formData=new FormData(document.getElementById("bookingForm"));
-    request.send(formData);*/
-}
-
-
 
 
 
