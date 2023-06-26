@@ -447,12 +447,12 @@ if(document.getElementById("bookingForm")){
             if(!response.ok){
                 console.log("fuck.");
             }
-            console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
-            //response.json().then(function(obj){
-            //    console.log(obj.message);
-            //});
-        }).then(function(obj){
-            console.log(obj.message);
+            //console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
+            response.json().then(function(obj){
+                console.log(obj.message);
+            });
+        }).then((body)=>{
+            
         }).catch((error)=>{
 
         });
