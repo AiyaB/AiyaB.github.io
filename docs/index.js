@@ -448,11 +448,11 @@ if(document.getElementById("bookingForm")){
                 console.log("fuck.");
             }
             console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
-            response.json().then(function(obj){
-                console.log(obj.message);
-            });
-        }).then((body)=>{
-
+            //response.json().then(function(obj){
+            //    console.log(obj.message);
+            //});
+        }).then(function(obj){
+            console.log(obj.message);
         }).catch((error)=>{
 
         });
