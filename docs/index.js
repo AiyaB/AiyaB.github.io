@@ -447,7 +447,7 @@ if(document.getElementById("bookingForm")){
             if(!response.ok){
                 console.log("fuck.");
             }
-            console.log(response.text());//whatever's sent back
+            console.log(response);//whatever's sent back
         }).then((body)=>{
             console.log(body);
         }).catch((error)=>{
