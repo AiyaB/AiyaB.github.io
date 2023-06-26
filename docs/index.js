@@ -435,6 +435,7 @@ function resetForm(){//ONLY RESET IF FORM SUCCESSFUL
     },2000);
 }
 
+let bookingResponse="Form failed to send, please try again";
 if(document.getElementById("bookingForm")){
     let form=document.getElementById("bookingForm");
     form.addEventListener('submit',(event)=>{
@@ -449,13 +450,17 @@ if(document.getElementById("bookingForm")){
             }
             //console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
             response.json().then(function(obj){
-                console.log(obj.message);
+                bookingResponse=obj.message;
             });
         }).then((body)=>{
-            
         }).catch((error)=>{
-
         });
+        let messageDisplay=document.getElementById("bookingResponse");
+        messageDisplay.innerHTML=bookingResponse;
+        if(bookingResponse=="We have successfully sent your booking request"){
+            form.reset();
+        }
+        messageDisplay.style.display="block";
     });
 }
 
