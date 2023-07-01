@@ -425,14 +425,12 @@ function downMonth(){
 
 //document.getElementById("bookingSubmit").addEventListener("click",getResponse);
 function resetForm(){//ONLY RESET IF FORM SUCCESSFUL
-    setTimeout(function(){
-        document.getElementById("bookingForm").reset();
-        if(document.getElementById("bookingInfo")){
-            document.getElementById("bookingInfo").style.display="none";
-        }
-        document.getElementById("bookingResponse").style.display="block";
-        resetHighlights();
-    },2000);
+    document.getElementById("bookingForm").reset();
+    if(document.getElementById("bookingInfo")){
+        document.getElementById("bookingInfo").style.display="none";
+    }
+    document.getElementById("bookingResponse").style.display="block";
+    resetHighlights();
 }
 
 let bookingResponse="Form failed to send, please try again";
