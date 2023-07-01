@@ -103,6 +103,7 @@ a:active{
 #hostelInfoNav:hover #hostelInfo{
     display:block;
     padding:0;
+    color:black;
 }
 
 #navToggle{
