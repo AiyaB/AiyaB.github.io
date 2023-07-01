@@ -459,12 +459,25 @@ if(document.getElementById("bookingForm")){
                     resetForm();
                 }
                 messageDisplay.style.display="block";
+                //TODO: clicking form again messageDisplay.style.display="none";
+                let formInputs=document.getElementById("bookingForm").elements;
+                for(let i=0;i<formInputs.length;i++){
+                    formInputs[i].addEventListener("input",function(){
+                        messageDisplay.style.display="none";
+                    });
+                }
             });
         })
         .then((body)=>{
         })
         .catch((error)=>{
             console.log("Error:",error);
+            let messageDisplay=document.getElementById("bookingResponse");
+            messageDisplay.style.display="block";
+            messageDisplay.innerHTML=error;
+            if(error=="TypeError: NetworkError when attempting to fetch resource."){
+                messageDisplay.innerHTML="Cannot connect to internet, please retry"
+            }
         });
     });
 }
