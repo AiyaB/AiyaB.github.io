@@ -444,23 +444,29 @@ if(document.getElementById("bookingForm")){
         fetch(event.target.action,{
             method:'POST',
             body:new URLSearchParams(new FormData(event.target))
-        }).then((response)=>{
+        })
+        .then((response)=>{
             if(!response.ok){
-                console.log("fuck.");
+                console.log("Response wasn't good...");
             }
             //console.log(response.json());//.json() or .text() depending on if .send() or .json() in mail function
-            response.json().then(function(obj){
+            response.json()
+            .then(function(obj){
                 bookingResponse=obj.message;
                 console.log("response now "+bookingResponse);
                 let messageDisplay=document.getElementById("bookingResponse");
                 messageDisplay.innerHTML=bookingResponse;
                 if(bookingResponse=="We have successfully sent your booking request"){
+                    messageDisplay.style.color="hsl(149, 100%, 26%)";
                     form.reset();
                 }
                 messageDisplay.style.display="block";
             });
-        }).then((body)=>{
-        }).catch((error)=>{
+        })
+        .then((body)=>{
+        })
+        .catch((error)=>{
+            console.log("Error:",error);
         });
     });
 }
