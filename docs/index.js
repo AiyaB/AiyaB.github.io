@@ -458,7 +458,7 @@ if(document.getElementById("bookingForm")){
                 messageDisplay.innerHTML=bookingResponse;
                 if(bookingResponse=="We have successfully sent your booking request"){
                     messageDisplay.style.color="hsl(149, 100%, 26%)";
-                    form.reset();
+                    resetForm();
                 }
                 messageDisplay.style.display="block";
             });
