@@ -464,7 +464,7 @@ if(document.getElementById("bookingForm")){
                 for(let i=0;i<formInputs.length;i++){
                     formInputs[i].addEventListener("input",function(){
                         messageDisplay.style.display="none";
-                        messageDisplay.style.color=none;
+                        messageDisplay.style.color=null;
                     });
                 }
             });
