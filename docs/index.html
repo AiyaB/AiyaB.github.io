@@ -36,15 +36,15 @@
       <section id="logoSection">
         <img id="wallabyLogo" src="WallabyLogoTextNoBG.png" alt="Wallaby Hostel Logo">
       </section>
-      <form id="bookingForm" name="booking" method="POST" target="bookingResponse" onsubmit="resetForm()" action="https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit">
+      <form id="bookingForm" name="booking" method="POST" action="https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit">
         <h2>Book Now</h2>
-        <input type="text" id="checkinDate" name="Checkin Date" placeholder="Check-In" required readonly>
-        <input type="text" id="checkoutDate" name="Checkout Date" placeholder="Check-Out" required readonly>
+        <input type="text" id="checkinDate" name="checkinDate" placeholder="Check-In" required readonly>
+        <input type="text" id="checkoutDate" name="checkoutDate" placeholder="Check-Out" required readonly>
         <table id="calendar">
           <tr> 
-            <td class="monthToggle" colspan="2"><div id="leftMonth">◀</div></td>
+            <td class="monthToggle" colspan="2"><div id="leftMonth">◀&#xFE0E;</div></td>
             <th colspan="3"><p id="year"></p><p id="month"></p></th>
-            <td class="monthToggle" colspan="2"><div id="rightMonth">▶</div></td>
+            <td class="monthToggle" colspan="2"><div id="rightMonth">▶&#xFE0E;</div></td>
           </tr>
           <tr>
             <th>Mo</th>
@@ -91,7 +91,7 @@
           <input type="submit" id="bookingSubmit" value="Check Availability">
         </section>
       </form>
-      <iframe name="bookingResponse" id="bookingResponse"></iframe>
+      <h3 id="bookingResponse"></h3>
       <section id="mapSection">
         <div id="googleMap"></div>
         <p>Wallaby Hostel<br>
