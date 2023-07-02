@@ -238,6 +238,9 @@ main{
 #roomType{
     display:block;
     margin:3px auto 8px auto;
+    width:166px;
+    border-radius:3px;
+    border:1px solid gray;
 }
 #guestCount{
     display:block;
@@ -274,6 +277,11 @@ main{
 #bookingSubmit{
     display:block;
     margin:10px auto;
+    width:144px;
+    color:white;
+    background-color:hsl(149, 100%, 26%);
+    border:none;
+    border-radius:3px;
 }
 #calendar label{
     float:left;
