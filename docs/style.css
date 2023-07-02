@@ -98,7 +98,10 @@ a:active{
     z-index:3;
     padding:10px 18px;
     cursor:default;
-    color:hsl(42, 99%, 54%);
+}
+.hostelInfoNav:hover{
+    background-color:hsl(42, 99%, 54%);
+    color:black;
 }
 #hostelInfoNav:hover #hostelInfo{
     display:block;
