@@ -394,7 +394,8 @@ brown: hsl(25, 80%, 41%) #bc5b15
     color:black;
     border-radius:50%;
     font-size:14px;
-    text-align: -webkit-center;
+    text-align:-webkit-center;
+    padding:0;
 }
 #hostelInfoRightToggle{
     border:none;
@@ -408,6 +409,7 @@ brown: hsl(25, 80%, 41%) #bc5b15
     border-radius:50%;
     font-size:14px;
     text-align:-webkit-center;
+    padding:0;
 }
 #hostelInfoRightToggle:hover,#hostelInfoLeftToggle:hover{
     background-color:black;
