@@ -387,17 +387,14 @@ brown: hsl(25, 80%, 41%) #bc5b15
     border:none;
     position:absolute;
     left:0px;
+    top:0;
     width:25px;
     height:25px;
     background-color:hsl(42, 99%, 54%);
     color:black;
     border-radius:50%;
     font-size:14px;
-    text-align:center;
-    text-indent:2px;
-    z-index:1;
-    font-size: 18px;
-    line-height:32px;
+    text-align: -webkit-center;
 }
 #hostelInfoRightToggle{
     border:none;
@@ -410,8 +407,7 @@ brown: hsl(25, 80%, 41%) #bc5b15
     color:black;
     border-radius:50%;
     font-size:14px;
-    text-align:left;
-    text-indent:4px;
+    text-align:-webkit-center;
 }
 #hostelInfoRightToggle:hover,#hostelInfoLeftToggle:hover{
     background-color:black;
