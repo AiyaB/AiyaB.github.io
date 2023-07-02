@@ -394,9 +394,12 @@ brown: hsl(25, 80%, 41%) #bc5b15
     color:black;
     border-radius:50%;
     font-size:14px;
-    text-align:left;
+    text-align:center;
+    vertical-align:bottom;
     text-indent:2px;
     z-index:1;
+    font-size: 18px;
+    line-height:32px;
 }
 #hostelInfoRightToggle{
     border:none;
