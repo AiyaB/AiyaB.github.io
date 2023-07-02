@@ -535,6 +535,8 @@ async function googleMap(){
 }
 googleMap();
 
+
+//+/- toggle
 function toggleInfo(toggle){
     if(toggle.nextElementSibling.style.display!="none"){
         toggle.nextElementSibling.style.display="none";
@@ -546,6 +548,9 @@ function toggleInfo(toggle){
     }
 }
 
+
+
+//hostel.html
 let imgIndex=0;
 let hostelBedImg=[
     ["8-Bed Mixed Dorm","8BedDorm.jpg","8BedBalcony.jpg"],
@@ -593,7 +598,18 @@ function toggleInfoImg(toggle){
         imgsList.appendChild(li);
     }
 }
- 
+if(document.getElementById("hostelInfoImgList")){
+    let scrollArea=document.getElementById("hostelInfoImgList");
+    scrollArea.addEventListener("wheel",(event)=>{
+        event.preventDefault();
+        scrollArea.scrollLeft+=event.deltaY;
+    })
+}
+
+
+
+
+//saranda map
 function displayPlace(place){
     document.getElementById(place+"Place").style.display="block";
 }
