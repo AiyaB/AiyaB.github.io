@@ -554,7 +554,7 @@ function toggleInfo(toggle){
 let imgIndex=0;
 let hostelBedImg=[
     ["8-Bed Mixed Dorm","8BedDorm.jpg","8BedBalcony.jpg"],
-    ["4-Bed Mixed Dorm","placeholder.jpg","placeholder.jpg"],
+    ["4-Bed Mixed Dorm","4BedDorm.jpg","placeholder.jpg"],
     ["4-Bed Female Dorm","placeholder.jpg"],
     ["Private Room","placeholder.jpg","placeholder.jpg","placeholder.jpg","placeholder.jpg","placeholder.jpg","placeholder.jpg","placeholder.jpg","placeholder.jpg","placeholder.jpg"]
 ];
@@ -628,6 +628,9 @@ function placeClick(place,imgRatio,name,nameWid,dist){
     let mapImgBG=document.getElementById("placeImgBG");
     mapImgBG.style.display="block";
 
+    let mapTextBG=document.getElementById("placeTextBG");
+    mapTextBG.setAttribute('transform',"translate(0,"+(imgRatio*125)+")");
+
     let mapImgName=document.getElementById("placeName");
     mapImgName.innerHTML=name;
     mapImgName.setAttribute('transform',"translate(-"+(nameWid/2)+","+(imgRatio*125+20)+")");
@@ -639,7 +642,9 @@ function placeClick(place,imgRatio,name,nameWid,dist){
         mapImgDist.innerHTML="Not far at all";
         mapImgDist.setAttribute('transform',"translate(19,"+(imgRatio*125+40)+")");
     }
+    mapTextBG.style.display="block";
     mapImgDist.style.display="block";
+    mapImgName.style.display="block";
 }
 function hidePlaceImg(){
     let mapImg=document.getElementById("placeImg");
@@ -648,4 +653,8 @@ function hidePlaceImg(){
     mapImgBG.style.display="none";
     let mapImgDist=document.getElementById("placeDistance");
     mapImgDist.style.display="none";
+    let mapImgName=document.getElementById("placeName");
+    mapImgName.style.display="none";
+    let mapTextBG=document.getElementById("placeTextBG");
+    mapTextBG.style.display="none";
 }
