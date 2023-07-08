@@ -2,7 +2,7 @@
 let cookie=document.cookie;
 if(cookie!="isLoch=true"){
     let password=prompt("Enter the Wallaby wifi password","");
-    if(password=="112233"){
+    if(password=="11223344"){
         document.cookie="isLoch=true";
     }
     else{
