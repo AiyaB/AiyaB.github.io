@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:black">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex"><!--PREVENTS GOOGLE-->
+    <title>The Wallaby Hostel | Discounts</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./WallabyLogoHead.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <a id="navLogo" href="./"><img id="logo" src="WallabyLogoHead.png" alt="The Wallaby Hostel"></a>
+      <nav id="topNav">
+        <button id="navToggle">
+          <span class="toggleLine"></span>
+          <span class="toggleLine"></span>
+          <span class="toggleLine"></span>
+        </button>
+        <ul id="navList">
+          <li><a class="navTab" href="book">BOOK</a></li>
+          <li id="hostelInfoNav" class="navTab" onclick="">INFO
+            <ul id="hostelInfo">
+              <li><a class="navTab" href="hostel">HOSTEL</a></li>
+              <li><a class="navTab" href="directions">DIRECTIONS</a></li>
+              <li><a class="navTab" href="games">GAMES</a></li>
+            </ul>
+          </li>
+          <li><a class="navTab active" href="discounts">DISCOUNTS</a></li>
+          <li><a class="navTab" href="events">EVENTS</a></li>
+          <li><a class="navTab" href="contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header> 
+    <main>
+      <h2 class="infoHeader">Discounts</h2>
+      <ul id="discounts" class="infoList">
+        <li>
+            <div class="infoToggle" onclick="toggleInfo(this)"><img class="infoTogglePlus" src="plus.png" alt="expand superman walk info"><h3>Superman Walk <span class="discountPercent">10%</span></h3></div>
+            <div class="info" style="display: none;">Walk all the way from either the ferry port or the bus station while wearing your underwear on the outside of your pants
+                <img class="discountImg" src="superman.png" alt="superman logo">
+            </div>
+        </li>
+        <li>
+            <div class="infoToggle" onclick="toggleInfo(this)"><img class="infoTogglePlus" src="plus.png" alt="expand aussie slang info"><h3>Aussie Slang <span class="discountPercent">10%</span></h3></div>
+            <div class="info" style="display: none;">Name 7 aussie slang words at check-in
+                <img class="discountImg" src="aussieSpeech.png" alt="aussie speech-bubble">
+            </div>
+        </li>
+        <li>
+            <div class="infoToggle" onclick="toggleInfo(this)"><img class="infoTogglePlus" src="plus.png" alt="expand vegemite info"><h3>Vegemite <span class="discountPercent">Free</span></h3></div>
+            <div class="info" style="display: none;">Bring us a jar of Vegemite for a free night in an 8-bed dorm
+                <img class="discountImg" src="aussieSpeech.png" alt="aussie speech-bubble">
+            </div>
+        </li>
+      </ul>
+    </main>
+  </body>
+  <footer>Wallaby Hostel ©2023</footer>
+  <script src="index.js"></script>
+</html>
+

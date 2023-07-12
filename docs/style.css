@@ -511,6 +511,21 @@ brown: hsl(25, 80%, 41%) #bc5b15
 }
 
 
+/*Discounts*/
+.discountPercent{
+    color:hsl(25, 80%, 41%);
+}
+
+.infoToggle:hover .discountPercent{
+    color:hsl(42, 99%, 54%);
+}
+.discountImg{
+    width:100px;
+    max-height:200px;
+    display:block;
+    margin:auto;
+}
+
 /*Events*/
 #specials{
     border-collapse:collapse;
@@ -646,7 +661,7 @@ footer{
     top:calc(100vh - 40px);*/
 }
 
-@media only screen and (max-width:560px){
+@media only screen and (max-width:646px){
     header{
         height:103px;
     }
