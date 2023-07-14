@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <a id="navLogo" href="./"><img id="logo" src="WallabyLogoHead.png" alt="The Wallaby Hostel"></a>
+      <a id="navLogo" href="../"><img id="logo" src="WallabyLogoHead.png" alt="The Wallaby Hostel"></a>
       <nav id="topNav">
         <button id="navToggle">
           <span class="toggleLine"></span>
@@ -19,17 +19,17 @@
           <span class="toggleLine"></span>
         </button>
         <ul id="navList">
-          <li><a class="navTab" href="book">BOOK</a></li>
+          <li><a class="navTab" href="/book/">BOOK</a></li>
           <li id="hostelInfoNav" class="navTab" onclick="">INFO
             <ul id="hostelInfo">
-              <li><a class="navTab" href="hostel">HOSTEL</a></li>
-              <li><a class="navTab" href="directions">DIRECTIONS</a></li>
-              <li><a class="navTab" href="games">GAMES</a></li>
+              <li><a class="navTab" href="/hostel/">HOSTEL</a></li>
+              <li><a class="navTab" href="/directions/">DIRECTIONS</a></li>
+              <li><a class="navTab" href="/games/">GAMES</a></li>
             </ul>
           </li>
-          <li><a class="navTab" href="discounts">DISCOUNTS</a></li>
-          <li><a class="navTab" href="events">EVENTS</a></li>
-          <li><a class="navTab" href="contact">CONTACT</a></li>
+          <li><a class="navTab" href="/discounts/">DISCOUNTS</a></li>
+          <li><a class="navTab" href="/events/">EVENTS</a></li>
+          <li><a class="navTab" href="/contact/">CONTACT</a></li>
         </ul>
       </nav>
     </header> 
@@ -64,11 +64,10 @@
             <option value="8-BedMixed">8-Bed Mixed Dorm</option>
             <option value="4-BedMixed">4-Bed Mixed Dorm</option>
             <option value="4-BedFemale">4-Bed Female Dorm</option>
-            <option value="Private Room">Private Room</option>
           </select>
           <label for="Number of Guests">Guests</label>
           <input name="Number of Guests" id="guestCount" type="number" min=1 max=10 value=1 required>
-          <h3 id="stayPrice">0 lekë</h3>
+          <h3 id="stayPrice">0€</h3>
           <p id="tax">+100 lekë occupancy tax per guest per night</p>
           <input name="Total Price" id="totalPrice" type="number" style="display:none" readonly>
           

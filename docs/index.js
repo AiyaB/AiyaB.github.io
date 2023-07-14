@@ -86,31 +86,31 @@ function calculatePrice(){
     let guests=document.getElementById("guestCount").value;
     let totalPrice=document.getElementById("totalPrice");
     if(roomType.value=="8-BedMixed"){
-        price=1300;
+        price=17;
     }
     else if(roomType.value=="4-BedMixed"){
-        price=1400;
+        price=19;
     }
     else if(roomType.value=="4-BedFemale"){
-        price=1400;
+        price=19;
     }
-    else if(roomType.value=="Private Room"){
+    /*else if(roomType.value=="Private Room"){
         price=6969;
         guests=Math.ceil(guests/2);//occupancy of 2
 
-    }
+    }*/
     else{
         price=69696969;
     }
 
     if(nights==1){
-        stayPrice.innerHTML=parseInt(nights*price*guests)+" lekë";
+        stayPrice.innerHTML=parseInt(nights*price*guests)+"€";
     }
     else if(nights==0){
-        stayPrice.innerHTML="0 lekë";
+        stayPrice.innerHTML="0€";
     }
     else{
-        stayPrice.innerHTML=parseInt(nights*price*guests)+" lekë, "+parseInt(price*guests)+" nightly";
+        stayPrice.innerHTML=parseInt(nights*price*guests)+"€, "+parseInt(price*guests)+"€ nightly";
     }
     totalPrice.value=parseInt(nights*price*guests+(100*document.getElementById("guestCount").value));
 }
