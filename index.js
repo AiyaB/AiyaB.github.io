@@ -512,7 +512,7 @@ async function googleMap(){
 "<div id='content' style='font-family: Arial, sans-serif;'>"+
     "<h2 style='font-family: Arial, sans-serif;'>The Wallaby Hostel</h2>"+
     "<a target='_blank' style='font-size:18px;outline:none;font-family: Arial, sans-serif;color:hsl(214, 82%, 51%);' href='https://www.google.com/maps/dir//Wallaby+Hostel,+AL,+Rruga+Pandeli+Bocari,+Sarand%C3%AB+9701,+Albania/@39.8772403,20.0015374,15.92z/data=!4m9!4m8!1m0!1m5!1m1!1s0x135b15bd7dc6afb7:0xd63fd6fcd14157ee!2m2!1d20.0070345!2d39.8773899!3e2?entry=ttu'>"+
-        "<img src='directionsSymbol.png' style='width:18px;position:relative;top:5px;right:2px;background-color:hsl(214, 82%, 51%);border-radius:50%;padding:2px'>"+
+        "<img src='../assets/directionsSymbol.png' style='width:18px;position:relative;top:5px;right:2px;background-color:hsl(214, 82%, 51%);border-radius:50%;padding:2px'>"+
         "Directions</a>"+
     "<div id='mapRating' style='font-size:16px;color:hsl(210, 4%, 44%);font-family: Arial, sans-serif;'>"+
         results[0].rating+"<img id='mapRatingStars' src='../assets/ratingStars.png' alt='rating' "+

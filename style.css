@@ -108,27 +108,27 @@ a{
                 padding:0;
                 color:black;
             }
-#navToggle{
-    background-color:black;
-    border:none;
-    display:none;
-    width:fit-content;
-    height:fit-content;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:2px 7px;
-    margin:auto 16px auto auto;
-    cursor:pointer;
-}
-.toggleLine{
-    width:45px;
-    height:6px;
-    display:block;
-    background-color:hsl(42, 99%, 54%);
-    margin:8px auto;
-    border-radius:3px;
-}
+    #navToggle{
+        background-color:black;
+        border:none;
+        display:none;
+        width:fit-content;
+        height:fit-content;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:2px 7px;
+        margin:auto 16px auto auto;
+        cursor:pointer;
+    }
+        .toggleLine{
+            width:45px;
+            height:6px;
+            display:block;
+            background-color:hsl(42, 99%, 54%);
+            margin:8px auto;
+            border-radius:3px;
+        }
 
 main{
     background-color:whitesmoke;
@@ -143,177 +143,175 @@ main{
 #logoSection{
     background-color:hsl(42, 99%, 54%);
 }
-#wallabyLogo{
-    width:40%;
-    max-width:200px;
-}
-
-/*Booking*/
-#bookingForm{
-    margin:10px auto;
-}
-#bookingForm h2{
-    margin-bottom:5px;
-}
-
-#calendar{
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-    border:10px solid hsl(149, 100%, 26%);
-    border-radius:20px;
-    font-family:Armavir;
-    margin:10px auto;
-}
-#calendar #leftMonth,#calendar #rightMonth{
-    border:none;
-    outline:none;
-    border-radius:50%;
-    text-align:center;
-    width:32px;
-    height:32px;
-    background-color:white;
-    font-size: 18px;
-    line-height:32px;
-}
-#leftMonth{
-    padding-right:3px;
-    padding-bottom:3px;
-    margin:0 0 0 auto;
-}
-#rightMonth{
-    padding-left:3px;
-    padding-bottom:3px;
-    margin:0 auto 0 0;
-}
-
-#calendar #leftMonth:hover,#calendar #rightMonth:hover{
-    background-color:hsl(42, 99%, 54%);
-    cursor:pointer;
-}
-#calendar .monthToggle{
-    border-radius:20px;
-    background-color:whitesmoke;
-    width:60px;
-}
-#calendar .monthToggle:hover{
-    background-color:whitesmoke;
-    cursor:default;
-}
-#year,#month{
-    padding:0;
-    margin:0;
-}
-#calendar th{
-    width:32px;
-}
-#calendar td{
-    height:32px;
-    background-color:white;
-    border-radius:50%;
-    box-sizing:border-box;
-}
-#calendar td:hover{
-    background-color:hsl(42, 99%, 54%);
-    cursor:pointer;
-}
-#calendar .pastDay{
-    background-color:white;
-    color:lightgray;
-}
-#calendar .pastDay:hover{
-    background-color:white;
-}
-#calendar .pastDayMonth{
-    color:gray;
-}
-#bookingInfo{
-    display:none;
-}
-#stayLength, #stayPrice{
-    margin:0 auto 5px auto;
-    color:hsl(149, 100%, 26%);
-}
-#roomType{
-    display:block;
-    margin:3px auto 8px auto;
-    width:166px;
-    border-radius:3px;
-    border:1px solid gray;
-    background-color:rgb(225, 225, 225);
-    color:black;
-}
-    #roomType option:hover{
-        background-color:lightgrey;
+    #wallabyLogo{
+        width:40%;
+        max-width:200px;
     }
-#guestCount{
-    display:block;
-    margin:3px auto 8px auto;
-    width:50px;
-}
-#stayPrice{
-    margin:0 auto;
-    color:hsl(149, 100%, 26%);
-}
-#tax{
-    margin-top:0;
-    font-size:12px;
-}
-#guestFirstName, #guestLastName, #guestEmail, #guestPhone{
-    display:block;
-    margin:3px auto 8px auto;
-    width:175px;
-    font-family: Arial, sans-serif;
-}
-#guestNotes{
-    display:block;
-    margin:3px auto 8px auto;
-    width:175px;
-    font-family: Arial, sans-serif;
-}
-#GDPR{
-    font-family: Arial, sans-serif;
-}
-#gdprContainer{
-    width:70vw;
-    margin:0 auto;
-}
-#bookingSubmit{
-    display:block;
-    margin:10px auto;
-    width:144px;
-    color:white;
-    background-color:hsl(149, 100%, 26%);
-    border:none;
-    border-radius:3px;
-}
-#calendar label{
-    float:left;
-}
-#bookingResponse{
-    height:70px;
-    width:80%;
-    max-width:345px;
-    margin:auto;
-    border:none;
-    display:none;
-    color:hsl(355, 82%, 60%);
-}
-
 #mapSection{
     background-color:black;
     color:white;
     padding:10px;
     margin-top:15px;
 }
-#googleMap{
-    color:black;
-    height:350px;
-    width:585px;
-    max-width:90%;
+    #googleMap{
+        color:black;
+        height:350px;
+        width:585px;
+        max-width:90%;
+        margin:10px auto;
+        font-family: Arial, sans-serif;
+    }
+
+/*Booking*/
+#bookingForm{
     margin:10px auto;
-    font-family: Arial, sans-serif;
 }
+    #bookingForm h2{
+        margin-bottom:5px;
+    }
+    #calendar{
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        border:10px solid hsl(149, 100%, 26%);
+        border-radius:20px;
+        font-family:Armavir;
+        margin:10px auto;
+    }
+        #calendar #leftMonth,#calendar #rightMonth{
+            border:none;
+            outline:none;
+            border-radius:50%;
+            text-align:center;
+            width:32px;
+            height:32px;
+            background-color:white;
+            font-size: 18px;
+            line-height:32px;
+        }
+        #leftMonth{
+            padding-right:3px;
+            padding-bottom:3px;
+            margin:0 0 0 auto;
+        }
+        #rightMonth{
+            padding-left:3px;
+            padding-bottom:3px;
+            margin:0 auto 0 0;
+        }
+            #calendar #leftMonth:hover,#calendar #rightMonth:hover{
+                background-color:hsl(42, 99%, 54%);
+                cursor:pointer;
+            }
+            #calendar .monthToggle{
+                border-radius:20px;
+                background-color:whitesmoke;
+                width:60px;
+            }
+                #calendar .monthToggle:hover{
+                    background-color:whitesmoke;
+                    cursor:default;
+                }
+        #year,#month{
+            padding:0;
+            margin:0;
+        }
+        #calendar th{
+            width:32px;
+        }
+        #calendar td{
+            height:32px;
+            background-color:white;
+            border-radius:50%;
+            box-sizing:border-box;
+        }
+            #calendar td:hover{
+                background-color:hsl(42, 99%, 54%);
+                cursor:pointer;
+            }
+        #calendar .pastDay{
+            background-color:white;
+            color:lightgray;
+        }
+            #calendar .pastDay:hover{
+                background-color:white;
+            }
+        #calendar .pastDayMonth{
+            color:gray;
+        }
+        #calendar label{
+            float:left;
+        }
+    #bookingInfo{
+        display:none;
+    }
+        #stayLength, #stayPrice{
+            margin:0 auto 5px auto;
+            color:hsl(149, 100%, 26%);
+        }
+        #roomType{
+            display:block;
+            margin:3px auto 8px auto;
+            width:166px;
+            border-radius:3px;
+            border:1px solid gray;
+            background-color:rgb(225, 225, 225);
+            color:black;
+        }
+            #roomType option:hover{
+                background-color:lightgrey;
+            }
+        #guestCount{
+            display:block;
+            margin:3px auto 8px auto;
+            width:50px;
+        }
+        #stayPrice{
+            margin:0 auto;
+            color:hsl(149, 100%, 26%);
+        }
+        #tax{
+            margin-top:0;
+            font-size:12px;
+        }
+        #guestFirstName, #guestLastName, #guestEmail, #guestPhone{
+            display:block;
+            margin:3px auto 8px auto;
+            width:175px;
+            font-family: Arial, sans-serif;
+        }
+        #guestNotes{
+            display:block;
+            margin:3px auto 8px auto;
+            width:175px;
+            font-family: Arial, sans-serif;
+        }
+        #GDPR{
+            font-family: Arial, sans-serif;
+        }
+        #gdprContainer{
+            width:70vw;
+            margin:0 auto;
+        }
+        #bookingSubmit{
+            display:block;
+            margin:10px auto;
+            width:144px;
+            color:white;
+            background-color:hsl(149, 100%, 26%);
+            border:none;
+            border-radius:3px;
+        }
+        #bookingResponse{
+            height:70px;
+            width:80%;
+            max-width:345px;
+            margin:auto;
+            border:none;
+            display:none;
+            color:hsl(355, 82%, 60%);
+        }
+
 /*map marker css in js
 peach: hsl(34, 100%, 83%) #ffd9a8
 green: hsl(149, 100%, 26%) #008540
