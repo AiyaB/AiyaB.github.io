@@ -555,8 +555,7 @@ let imgIndex=0;
 let hostelBedImg=[
     ["8-Bed Mixed Dorm","../hostel/8BedDorm.jpg","../hostel/8BedBalcony.jpg"],
     ["4-Bed Mixed Dorm","../hostel/4BedDorm.jpg","../assets/placeholder.jpg"],
-    ["4-Bed Female Dorm","../assets/placeholder.jpg"],
-    ["Private Room","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg","../assets/placeholder.jpg"]
+    ["4-Bed Female Dorm","../assets/placeholder.jpg"]
 ];
 function focusInfoImg(hostelInfoImg){
     document.getElementById("focusedHostelInfoImg").src=hostelInfoImg.src;
