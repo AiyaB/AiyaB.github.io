@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:black">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex"><!--PREVENTS GOOGLE-->
+    <title>The Wallaby Hostel</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./WallabyLogoHead.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <a id="navLogo" href="../"><img id="logo" src="WallabyLogoHead.png" alt="The Wallaby Hostel"></a>
+      <nav id="topNav">
+        <button id="navToggle">
+          <span class="toggleLine"></span>
+          <span class="toggleLine"></span>
+          <span class="toggleLine"></span>
+        </button>
+        <ul id="navList">
+          <li><a class="navTab" href="/book/">BOOK</a></li>
+          <li id="hostelInfoNav" class="navTab" onclick="">INFO
+            <ul id="hostelInfo">
+              <li><a class="navTab" href="/hostel/">HOSTEL</a></li>
+              <li><a class="navTab" href="/directions/">DIRECTIONS</a></li>
+              <li><a class="navTab" href="/games/">GAMES</a></li>
+            </ul>
+          </li>
+          <li><a class="navTab" href="/discounts/">DISCOUNTS</a></li>
+          <li><a class="navTab" href="/events/">EVENTS</a></li>
+          <li><a class="navTab" href="/contact/">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header> 
+    <main>
+      <section id="logoSection">
+        <img id="wallabyLogo" src="WallabyLogoTextNoBG.png" alt="Wallaby Hostel Logo">
+      </section>
+      <form id="bookingForm" name="booking" method="POST" action="https://europe-central2-wallaby-site.cloudfunctions.net/onSubmit">
+        <h2>Book Now</h2>
+        <input type="text" id="checkinDate" name="checkinDate" placeholder="Check-In" required readonly>
+        <input type="text" id="checkoutDate" name="checkoutDate" placeholder="Check-Out" required readonly>
+        <table id="calendar">
+          <tr> 
+            <td class="monthToggle" colspan="2"><div id="leftMonth">◀&#xFE0E;</div></td>
+            <th colspan="3"><p id="year"></p><p id="month"></p></th>
+            <td class="monthToggle" colspan="2"><div id="rightMonth">▶&#xFE0E;</div></td>
+          </tr>
+          <tr>
+            <th>Mo</th>
+            <th>Tu</th>
+            <th>We</th>
+            <th>Th</th>
+            <th>Fr</th>
+            <th>Sa</th>
+            <th>So</th>
+          </tr>
+        </table>
+        <section id="bookingInfo">
+          <h3 id="stayLength">0 days, 0 nights</h3>
+          <label for="Room Type">Room Type</label>
+          <select name="Room Type" id="roomType" required>
+            <option value="8-BedMixed">8-Bed Mixed Dorm</option>
+            <option value="4-BedMixed">4-Bed Mixed Dorm</option>
+            <option value="4-BedFemale">4-Bed Female Dorm</option>
+          </select>
+          <label for="Number of Guests">Guests</label>
+          <input name="Number of Guests" id="guestCount" type="number" min=1 max=10 value=1 required>
+          <h3 id="stayPrice">0€</h3>
+          <p id="tax">+100 lekë occupancy tax per guest per night</p>
+          <input name="Total Price" id="totalPrice" type="number" style="display:none" readonly>
+          
+          <label for="Guest's First Name">First Name</label>
+          <input type="text" name="Guest's First Name" id="guestFirstName" required>
+          
+          <label for="Guest's Last Name">Last Name</label>
+          <input type="text" name="Guest's Last Name" id="guestLastName" required>
+          
+          <label for="Guest's Email">Email</label>
+          <input type="email" name="Guest's Email" id="guestEmail" required>
+          
+          <label for="Guest's Phone">Phone Number (optional)</label>
+          <input type="text" name="Guest's Phone" id="guestPhone">
+          
+          <label for="Guest's Notes">Notes (optional)</label>
+          <textarea name="Guest's Notes" id="guestNotes"></textarea>
+          
+          <label id="GDPR"><input type="checkbox" name="GDPR Check" required>I accept to having my credentials securely stored for the purpose of this booking</label>
+
+          <input type="submit" id="bookingSubmit" value="Check Availability">
+        </section>
+      </form>
+      <h3 id="bookingResponse"></h3>
+      <section id="mapSection">
+        <div id="googleMap"></div>
+        <p>Wallaby Hostel<br>
+
+        Rruga Pandeli Bocari 9701, Albania<br>
+        
+        ☏ +355 693 334 588</p>
+      </section>
+      
+    </main>
+  </body>
+  <footer>Wallaby Hostel ©2023</footer>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj8qUxzyOSySpiMf1vYTzPRiZ_BpYyKHE&libraries=places&callback=googleMap"></script>
+  <script src="index.js"></script>
+</html>
+
