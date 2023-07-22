@@ -1,11 +1,11 @@
 @font-face{
     font-family:Armavir;
-    src:url(assets/Armavir01.ttf) format("truetype");
+    src:url(../assets/Armavir01.ttf) format("truetype");
     font-weight:normal;
 }
 @font-face{
     font-family:Armavir;
-    src:url(assets/Armavir01-Bold.ttf) format("truetype");
+    src:url(../assets/Armavir01-Bold.ttf) format("truetype");
     font-weight:bold;
 }
 /*
@@ -243,6 +243,9 @@ main{
     background-color:rgb(225, 225, 225);
     color:black;
 }
+    #roomType option:hover{
+        background-color:lightgrey;
+    }
 #guestCount{
     display:block;
     margin:3px auto 8px auto;
