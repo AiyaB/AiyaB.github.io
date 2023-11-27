@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="robots" content="noindex"><!--PREVENTS GOOGLE-->
+        <title>Yamadasan - Madarao Accommodation</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/yamadasanLogoIcon.jpg" type="image/x-icon">
+    </head>
+    <body>
+    <header>
+        <nav id="topNav">
+            <ul>
+                <li>☏ +61 401 292 535</li>
+                <li><a>Snow Better</a></li>
+                <li><a>Jobs</a></li>
+                <li><button id="langToggle">🇯🇵日本語</button></li>
+            </ul>
+        </nav>
+        <a id="navLogo" href="../"><img id="logo" src="assets/YamadasanLogo.png" alt="Yamadasan Logo"></a>
+        <nav id="mainNav">
+            <button id="navToggle">
+                <span class="toggleLine"></span>
+                <span class="toggleLine"></span>
+                <span class="toggleLine"></span>
+            </button>
+            <ul id="navList">
+                <li><a class="navTab" href="/book/">BOOK</a></li>
+                <li class="navTab hostelInfoNav" onclick="">LODGE
+                    <ul id="lodgeInfo" class="expandedTab">
+                        <li><a class="navTab" href="/rooms/">ROOMS</a></li>
+                        <li><a class="navTab" href="/directions/">DIRECTIONS</a></li>
+                        <li><a class="navTab" href="/bar/">BAR</a></li>
+                    </ul>
+                </li>
+                <li class="navTab hostelInfoNav" onclick="">HOTEL
+                    <ul id="hotelInfo" class="expandedTab">
+                        <li><a class="navTab" href="/rooms/">ROOMS</a></li>
+                        <li><a class="navTab" href="/directions/">DIRECTIONS</a></li>
+                        <li><a class="navTab" href="/bar/">BAR</a></li>
+                        <li><a class="navTab" href="/general-store/">STORE</a></li>
+                    </ul>
+                </li>
+                <li><a class="navTab" href="/smokies/">SMOKIES</a></li>
+                <li><a class="navTab" href="/spa/">SPA</a></li>
+                <li><a class="navTab" href="/faq/">FAQ</a></li>
+                <li><a class="navTab" href="/contact/">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <section id="logoSection">
+        <img id="slideImg" src="assets/YamadasanGuestsLodge.jpg" alt="Photos of Yamadasan resort">
+    </section>
+    <h2>WELCOME TO YAMADASAN</h2>
+    <main>
+        <section>
+            <p>
+                <strong>Yamadasan</strong> provides families, large groups, couples, and 
+                adventure-seekers of all ages quality <a>Madarao accommodation</a>- with 
+                some of Japan's best ski country. We run a <a>9-room Ski Lodge</a> and a 
+                <a>38-room Ski Hotel</a> on beautifyl Madarao Mountain.
+            </p>
+            <p>
+                Our name “Yamadasan” (Yamada-san) holds within a proud tradition of 
+                exceptional hospitality provided by Mr & Mrs Yamada, the original 
+                owners of our first lodge accommodation procured at the beautiful 
+                Madarao.
+            </p>
+            <p>
+                Our doors and hearts are now open. We look forward to welcoming you 
+                into the growing Yamadasan family.
+            </p>
+        </section>
+        <section>
+            <p>Sign up for our Snow Better newsletter to receive the latest from Yamadasan!</p>
+            <div>INSERT SIGNUP HERE</div>
+        </section>
+        <section id="mapSection">
+            <div id="googleMap"></div>
+            <p>
+                Madarao Mountain<br>
+                <strong>LODGE:</strong> 1101-39 Tarumoto, Myoko, Niigata 389-2261<br>
+                <strong>HOTEL:</strong> 389-2253 Nagano, Iiyama, 304 Hachibozuka Madarao 11492<br>
+                ☏ +61 401 292 535
+            </p>
+        </section>
+    </main>
+    </body>
+    <footer>
+    <p>©2023 Copyright - Yamadasan - Japan Ski Accommodation by AUSTPAN</p>
+        <p><a>JOBS</a></p>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2h_BFKnWp3iPbLi0ZmvHJjb_KdRep2Ww&libraries=places&callback=googleMap"></script>
+    <script src="index.js"></script>
+</html>
+
