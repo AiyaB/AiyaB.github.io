@@ -1,309 +1,51 @@
 @font-face{
-    font-family:Armavir;
-    src:url(../assets/Armavir01.ttf) format("truetype");
-    font-weight:normal;
+    font-family: Armavir;
+    src: url(../assets/Armavir01.ttf) format("truetype");
+    font-weight: normal;
 }
 @font-face{
-    font-family:Armavir;
-    src:url(../assets/Armavir01-Bold.ttf) format("truetype");
-    font-weight:bold;
+    font-family: Armavir;
+    src: url(../assets/Armavir01-Bold.ttf) format("truetype");
+    font-weight: bold;
 }
 :root{
-    --peach: hsl(34, 100%, 83%);
-    --green: hsl(149, 100%, 26%);
-    --gold: hsl(42, 99%, 54%);
-    --brown: hsl(25, 80%, 41%);
-
-    --blue: hsl(197, 78%, 44%);
-    --orange: hsl(19, 93%, 54%);
-    --offwhite: hsl(0, 0%, 97%);
-    --grey: #aaaaaa;
+    --red: #CC0633;
+    --darkRed: #A6192E;
+    --darkGray: #54585A;
+    --gray: #aaaaaa;
 }
 *{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    margin:0;
-    padding:0;
-    background-color:white;
-    position:relative;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray);
+    position: relative;
 }
-header{
-    background-color:var(--white);
-    display:flex;
-    height:100px;
+button{
+    background-color: var(--white);
+    display: flex;
+    height: 100px;
+    background-color: var(--red);
 }
 a{
-    text-decoration:none;
-    height:fit-content;
-    color:var(--blue);
-    cursor:pointer;
+    text-decoration: none;
+    height: fit-content;
+    color: var(--darkRed);
+    cursor: pointer;
 }
     a:hover{
-        color:var(--orange);
+        color: var(--red);
     }
     a:active{
-        color:var(--blue);
+        color: var(--darkGray);
     }
-#navLogo{
-    background-color:white;
-    margin-right:10px;
-    position:absolute;
-    top:0;
-    left:0;
-    height:100px;
-}
-    #logo{
-        height:100px;
-    }
-#topNav{
-    background-color:var(--offwhite);
-    display:flex;
-    position:absolute;
-    top:0;
-    right:0;
-    width:100%;
-    height:30px;
-    padding:0 50px;
-    margin-left:217px;
-}
-    #topNav ul{
-        list-style-type:none;
-        width:100%;
-        height:100%;
-        margin:0;
-        font-size:15px;/*20 <<<<<<<<<<<<<<<<<<<*/
-        padding:0;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:right;
-        align-items:center;
-        z-index:1;
-    }
-    #topNav li{
-        margin:0 10px;
-    }
-    #topNav button{
-        border:none;
-        cursor:pointer;
-    }
-#mainNav{
-    width:calc(100% - 218px);
-    display:flex;
-    background-color:white;
-    position:absolute;
-    top:30px;
-    left:217px;
-    height:70px;
-
-}
-    #navList{
-        background-color:white;
-        list-style-type:none;
-        font-size:15px;/*20 <<<<<<<<<<<<<<<<<<<*/
-        padding:0;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        align-items:center;
-        z-index:1;
-    }
-        #navList li{
-            position:relative;
-        }
-        #navList .active{
-            background-color:var(--blue);
-            color:white;
-        }
-        #navList .active:hover{
-            color:var(--offwhite);
-        }
-    .navTab{
-        display:block;
-        padding:10px;
-        color:black;
-        background-color:white;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight:bold;
-        align-items:center;
-    }
-        .navTab:hover{
-            background-color:var(--blue);
-            color:white;
-        }
-    .expandedTab{
-        list-style-type:none;
-        text-align:center;
-        position:absolute;
-        right:0px;
-        top:37px;
-        display:none;
-        padding:0;
-        border:3px solid var(--blue);
-    }
-        .hostelInfoNav{
-            width:fit-content;
-            text-align:center;
-            z-index:3;
-            padding:10px 18px;
-            cursor:default;
-        }
-            .hostelInfoNav:hover{
-                background-color:var(--blue);
-                color:white;
-            }
-            .hostelInfoNav:hover .expandedTab{
-                display:block;
-                padding:0;
-            }
-    #navToggle{
-        background-color:black;
-        border:none;
-        display:none;
-        width:fit-content;
-        height:fit-content;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        padding:2px 7px;
-        margin:auto 16px auto auto;
-        cursor:pointer;
-    }
-        .toggleLine{
-            width:45px;
-            height:6px;
-            display:block;
-            background-color:var(--blue);
-            margin:8px auto;
-            border-radius:3px;
-        }
-
-main{
-    background-color:white;
-    margin:20px auto;
-    text-align:center;
-    padding:0;
-    width:90vw;
-    max-width:900px;
-    color:black;
-    position:relative;
-}
-#logoSection{
-    background-color:var(--offwhite);
-    width:100vw;
-    display:flex;
-    justify-content:center;
-}
-    #slideImg{
-        width:100%;
-        max-width:1000px;
-        margin:0 auto;
-    }
-    #logoSection h2{
-        width:100vw;
-    }
-#mapSection{
-    background-color:black;
-    color:white;
-    padding:10px;
-    margin-top:15px;
-}
-    #googleMap{
-        color:black;
-        height:350px;
-        width:585px;
-        max-width:90%;
-        margin:10px auto;
-        font-family: Arial, sans-serif;
-    }
-
-
-/*Contact*/
-#fbIcon{
-    padding:3px 13px 0 13px;
-    color:whitesmoke;
-    background-color:hsl(214, 89%, 52%);
-    font-size:40px;
-    border-radius:50%;
-    vertical-align:text-bottom;
-    overflow:hidden;
-    margin:10px;
-}
-    #fbIcon:hover{
-        background-color:hsl(214, 100%, 59%);
-    }
-    #fbIcon span{
-        position:relative;
-        top:6px;
-    }
-
-
 
 footer{
-    background-color:var(--offwhite);
-    color:var(--grey);
-    padding:10px 25px;
-}
-
-@media only screen and (max-width:745px){
-    header{
-        height:130px;
-    }
-    #navLogo{
-        background-color:white;
-        margin-right:10px;
-        position:absolute;
-        top:30px;
-        left:0;
-        height:100px;
-    }
-    #topNav{
-        width:100vw;
-        padding:0;
-        margin:0;
-    }
-    #topNav ul{
-        justify-content:center;
-    }
-    #mainNav{
-        height:100px;
-        display:flex;
-        flex-direction: column;
-    }
-    #navToggle{
-        background-color:white;
-        display:block;
-        margin-left:auto;
-        margin-top:24.5px;
-        border-radius:4px;
-    }
-    #navToggle:hover{
-        background-color:var(--offwhite);
-    }
-    #navList{
-        display:none;
-        margin:0 0 0 auto;
-        outline:3px solid var(--blue);
-        border:none;
-        width:120px;
-    }
-    #navList li{
-        width:100%;
-        text-align:center;
-    }
-    #lodgeInfo, #hotelInfo{
-        list-style-type:none;
-        text-align:center;
-        position:absolute;
-        margin-right:120px;
-    }
-    .hostelInfoNav{
-        padding:10px 0;
-    }
-    .expandedTab{
-        margin-right:113px;
-        margin-top:-49px;
-        top:46.5px;
-        right:0;
-    }
+    background-color: var(--darkGray);
+    position: fixed;
+    padding: 3px;
+    bottom: 0;
+    width: 100%;
 }
