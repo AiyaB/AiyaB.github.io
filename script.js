@@ -53,5 +53,4 @@ function getStops(data) {
 }
 
 fetchGTFS();
-fetchGTFS();
 
