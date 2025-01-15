@@ -21,6 +21,7 @@ async function fetchGTFS() {
 
     const data = await response.json();
 
+    console.log("Fuck.");
     getStops(JSON.parse(data));
     //console.log("Parsed GTFS Data:", data);
   } catch (error) {
