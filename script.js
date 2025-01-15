@@ -11,7 +11,7 @@ const buses = {
 
 
 async function fetchGTFS() {
-  const FUNCTION_URL = "https://REGION-PROJECT.cloudfunctions.net/gtfsRealtime";
+  const FUNCTION_URL = "https://northamerica-northeast2-translinkbustimes.cloudfunctions.net/gtfs-realtime-function";
 
   try {
     const response = await fetch(FUNCTION_URL);
