@@ -11,7 +11,7 @@ const buses = {
 
 
 async function fetchFromCloudFunction() {
-  const FUNCTION_URL = "https://[YOUR_FUNCTION_URL]";
+  const FUNCTION_URL = "https://us-central1-translinkbustimes.cloudfunctions.net/fetchAndDecodeGTFSRT";
 
   try {
     const response = await fetch(FUNCTION_URL);
