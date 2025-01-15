@@ -10,20 +10,21 @@ const buses = {
 }
 
 
-async function fetchFromCloudFunction() {
-  const FUNCTION_URL = "https://northamerica-northeast2-translinkbustimes.cloudfunctions.net/gtfs-realtime-function";
-  console.log("Fuck.");
+async function fetchGTFS() {
+  const FUNCTION_URL = "https://REGION-PROJECT.cloudfunctions.net/gtfsRealtime";
+
   try {
     const response = await fetch(FUNCTION_URL);
     if (!response.ok) {
-      throw new Error(`Error fetching GTFS data: ${response.statusText}`);
+      throw new Error(`Error: ${response.statusText}`);
     }
 
-    const arrayBuffer = await response.arrayBuffer();
-    console.log("GTFS Data:", arrayBuffer);
+    const data = await response.json();
+    console.log("Parsed GTFS Data:", data);
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
-fetchFromCloudFunction();
+fetchGTFS();
+
