@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="robots" content="noindex"><!--PREVENTS GOOGLE-->
-        <title>App APK here</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="assets/yamadasanLogoIcon.jpg" type="image/x-icon">
-    </head>
-    <body>
-        <main>
-            <header>App APK here</header>
-            <a href="assets/app-debug.apk" download="app-debug.apk">
-                <button class="btn"><i class="fa fa-download"></i> Download</button>
-            </a>
-        </main>
-    </body>
-    <footer>
-    <p>©2024 Group 6</p>
-    </footer>
-    <!--script src="index.js"></script-->
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Bus Arrivals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Next Bus Arrivals</h1>
+    <div id="info">
+        <p>Fetching bus arrival times...</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/protobufjs/dist/protobuf.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
