@@ -12,7 +12,7 @@ const buses = {
 
 async function fetchFromCloudFunction() {
   const FUNCTION_URL = "https://northamerica-northeast2-translinkbustimes.cloudfunctions.net/gtfs-realtime-function";
-
+  console.log("Fuck.");
   try {
     const response = await fetch(FUNCTION_URL);
     if (!response.ok) {
