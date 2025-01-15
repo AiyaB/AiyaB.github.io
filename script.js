@@ -29,6 +29,19 @@ async function fetchGTFS() {
   }
 }
 
+const fetchTimes = async () => {
+  const response = await fetch("https://your-api-url/gtfs-realtime");
+  const data = await response.json();
+
+  Object.entries(data).forEach(([route, times]) => {
+    console.log(`Route ${route}:`);
+    times.forEach((time) => {
+      console.log(`  Arriving in ${time} seconds`);
+    });
+  });
+};
+fetchTimes();
+
 function getStops(data) {
     const currentTime = Math.floor(Date.now() / 1000);
     const stopArrivalTimes = {};
