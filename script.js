@@ -9,28 +9,21 @@ const buses = {
     "145" : 51861 //49.27862486143122, -122.91296446703457
 }
 
-// Fetch GTFS-Realtime data
-async function fetchAndDecodeGTFSRT() {
-    const response = await fetch(GTFS_RT_URL, {
-      headers: { Accept: "application/x-protobuf" },
-    });
-  
+
+async function fetchFromCloudFunction() {
+  const FUNCTION_URL = "https://[YOUR_FUNCTION_URL]";
+
+  try {
+    const response = await fetch(FUNCTION_URL);
     if (!response.ok) {
-      throw new Error(`Failed to fetch GTFS-RT data: ${response.statusText}`);
+      throw new Error(`Error fetching GTFS data: ${response.statusText}`);
     }
-  
+
     const arrayBuffer = await response.arrayBuffer();
-  
-    // Load GTFS-Realtime schema
-    const root = await protobuf.load(
-      "https://raw.githubusercontent.com/google/transit/master/gtfs-realtime/proto/gtfs-realtime.proto"
-    );
-  
-    const FeedMessage = root.lookupType("transit_realtime.FeedMessage");
-  
-    // Decode GTFS-Realtime feed
-    const feed = FeedMessage.decode(new Uint8Array(arrayBuffer));
-    console.log(feed);
+    console.log("GTFS Data:", arrayBuffer);
+  } catch (error) {
+    console.error("Error:", error);
   }
-  
-  fetchAndDecodeGTFSRT().catch((error) => console.error("Error:", error));
+}
+
+fetchFromCloudFunction();
