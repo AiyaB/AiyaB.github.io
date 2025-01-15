@@ -2,11 +2,11 @@ const TRANSLINK_API_KEY = "LtaGE3TBKMXVU1nDPcdr";
 const GOOGLE_API_KEY = "AIzaSyBvC5Rw4DfQV5bc08fu2rK8TeeKZkHwDa0"
 const GTFS_RT_URL = `https://gtfsapi.translink.ca/v3/gtfsrealtime?apikey=${TRANSLINK_API_KEY}`;
 
-const buses = {
-    "r5": 53096, //49.27848225067688, -122.91279079399621
-    "143" : 52807, //49.27846387747979, -122.912680152876
-    "144" : 60662, //49.278148724124556, -122.9118296057002
-    "145" : 51861 //49.27862486143122, -122.91296446703457
+const stops = {
+    "53096": "R5",
+    "52807" : "143",
+    "60662" : "144",
+    "51861" : "145"
 }
 
 
@@ -20,11 +20,38 @@ async function fetchGTFS() {
     }
 
     const data = await response.json();
-    console.log("Parsed GTFS Data:", data);
+
+    getStops(data);
+    //console.log("Parsed GTFS Data:", data);
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
+function getStops(data) {
+    const currentTime = Math.floor(Date.now() / 1000);
+    const stopArrivalTimes = {};
+
+    Object.entries(stops).forEach(([stopId, routeId]) => {
+        data.feedEntity.forEach(entity => {
+            if (entity.tripUpdate) {
+                entity.tripUpdate.stopTimeUpdate.forEach(update => {
+                    const stopId = update.stopId;
+                    const arrivalTime = update.arrival?.time;
+                    if (stops[stopId] && arrivalTime) {
+                        const timeRemaining = arrivalTime - currentTime;
+                        if (timeRemaining > 0) {
+                            stopArrivalTimes[stops[stopId]] = `${timeRemaining} seconds`;
+                        }
+                    }
+                });
+            }
+        })
+    })
+
+    console.log(stopArrivalTimes);
+}
+
+fetchGTFS();
 fetchGTFS();
 
