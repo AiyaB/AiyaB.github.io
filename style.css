@@ -373,7 +373,7 @@ main{
 }
 
 #hostelInfoImgTitle{
-    width:275px;
+    width:285px;
     margin:auto;
     height:30px;
     position:relative;
@@ -382,7 +382,7 @@ main{
         text-align:center;
         margin:auto;
         position:relative;
-        width:225px;
+        width:230px;
     }
     #hostelInfoLeftToggle{
         border:none;
@@ -725,6 +725,7 @@ footer{
     }
 
 }
+
 
 
 
