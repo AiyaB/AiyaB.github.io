@@ -259,7 +259,7 @@ main{
         #roomType{
             display:block;
             margin:3px auto 8px auto;
-            width:166px;
+            width:170px;
             border-radius:3px;
             border:1px solid gray;
             background-color:rgb(225, 225, 225);
@@ -721,4 +721,5 @@ footer{
         top:46.5px;
         right:0;
     }
+
 }
