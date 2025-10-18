@@ -378,44 +378,45 @@ main{
     height:30px;
     position:relative;
 }
-#hostelInfoImgTitle h3{
-    text-align:center;
-    margin:auto;
-    position:relative;
-}
-#hostelInfoLeftToggle{
-    border:none;
-    position:absolute;
-    left:0px;
-    top:0;
-    width:25px;
-    height:25px;
-    background-color:var(--gold);
-    color:black;
-    border-radius:50%;
-    font-size:14px;
-    text-align:-webkit-center;
-    padding:0;
-}
-#hostelInfoRightToggle{
-    border:none;
-    position:absolute;
-    right:0px;
-    top:0;
-    width:25px;
-    height:25px;
-    background-color:var(--gold);
-    color:black;
-    border-radius:50%;
-    font-size:14px;
-    text-align:-webkit-center;
-    padding:0;
-}
-#hostelInfoRightToggle:hover,#hostelInfoLeftToggle:hover{
-    background-color:black;
-    color:var(--gold);
-    cursor:pointer;
-}
+    #hostelInfoImgTitle h3{
+        text-align:center;
+        margin:auto;
+        position:relative;
+        width:225px;
+    }
+    #hostelInfoLeftToggle{
+        border:none;
+        position:absolute;
+        left:0px;
+        top:0;
+        width:25px;
+        height:25px;
+        background-color:var(--gold);
+        color:black;
+        border-radius:50%;
+        font-size:14px;
+        text-align:-webkit-center;
+        padding:0;
+    }
+    #hostelInfoRightToggle{
+        border:none;
+        position:absolute;
+        right:0px;
+        top:0;
+        width:25px;
+        height:25px;
+        background-color:var(--gold);
+        color:black;
+        border-radius:50%;
+        font-size:14px;
+        text-align:-webkit-center;
+        padding:0;
+    }
+        #hostelInfoRightToggle:hover,#hostelInfoLeftToggle:hover{
+            background-color:black;
+            color:var(--gold);
+            cursor:pointer;
+        }
 #focusedHostelInfoImg{
     width:100%;
     max-width:500px;
@@ -724,5 +725,6 @@ footer{
     }
 
 }
+
 
 
