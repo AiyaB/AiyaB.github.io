@@ -304,7 +304,7 @@ main{
         #bookingSubmit{
             display:block;
             margin:10px auto;
-            width:144px;
+            width:164px;
             color:white;
             background-color:var(--green);
             border:none;
@@ -724,4 +724,5 @@ footer{
     }
 
 }
+
 
