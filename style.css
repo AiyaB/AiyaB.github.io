@@ -149,6 +149,7 @@ main{
 }
 #logoSection{
     background-color:var(--gold);
+    padding:20, 0;
 }
     #wallabyLogo{
         width:40%;
@@ -723,3 +724,4 @@ footer{
     }
 
 }
+
