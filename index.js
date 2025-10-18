@@ -1,15 +1,3 @@
-//password
-let cookie=document.cookie;
-if(cookie!="isLoch=true"){
-    let password=prompt("Enter the Wallaby wifi password","");
-    if(password=="11223344"){
-        document.cookie="isLoch=true";
-    }
-    else{
-        window.location="https://www.google.com/search?q=no";
-    }
-}
-
 function menuToggle(){
     let toggle=document.getElementById("navToggle");
     let menu=document.getElementById("navList");
@@ -45,7 +33,7 @@ function getTimes(){
     currentTime=new Date();
     currentHour=currentTime.getUTCHours()+2;//UTC to CET
     currentDate=currentTime.getDate()+(Math.floor(currentHour/24));
-    currentMonth=currentTime.getUTCMonth();//god I hate the month system. Jan=0,dec=11
+    currentMonth=currentTime.getUTCMonth();
     currentHour=currentHour%24;
     currentYear=currentTime.getUTCFullYear();
 }
@@ -65,7 +53,7 @@ let selecting=false;
 let selected=false;
 
 function calculateLength(){
-    let len=(checkout.getTime()-checkin.getTime())/(1000*60*60*24);
+    let len=((checkout.getTime()-checkin.getTime())/(1000*60*60*24)).round();
     let stayLength=document.getElementById("stayLength");
     if(len==0){
         stayLength.innerHTML="0 days, 0 nights"
@@ -100,7 +88,7 @@ function calculatePrice(){
 
     }*/
     else{
-        price=69696969;
+        price=-1;
     }
 
     if(nights==1){
@@ -180,7 +168,7 @@ function highlightDays(){
         for(let i=0;i<days.length;i++){
             let day=parseInt(days[i].innerHTML);
             let date=new Date(shownYear,shownMonth,day);
-            //if(shownMonth>=checkin[1] && shownMonth<=checkout[1] && date>checkin[0] && date<checkout[0]){
+
             if(checkin<date && date<checkout){//between dates
                 days[i].style.backgroundColor="hsl(34, 100%, 83%)";
                 days[i].style.borderRadius="0";
@@ -659,4 +647,5 @@ function hidePlaceImg(){
     mapImgName.style.display="none";
     let mapTextBG=document.getElementById("placeTextBG");
     mapTextBG.style.display="none";
+
 }
