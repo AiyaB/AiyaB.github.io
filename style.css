@@ -485,6 +485,12 @@ main{
     .place rect{
         width:115px;
     }
+    #wallabyPlace rect{
+        width:128px;
+    }
+    #haxiPlace rect{
+        width:60px;
+    }
 #gmapA{
     width:100px;
 }
@@ -728,6 +734,7 @@ footer{
     }
 
 }
+
 
 
 
