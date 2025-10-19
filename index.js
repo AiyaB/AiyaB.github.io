@@ -626,7 +626,7 @@ function placeClick(place,imgRatio,name,nameWid,dist){
     mapImgName.setAttribute('transform',"translate(-"+(nameWid/2)+","+(imgRatio*125+20)+")");
     
     let mapImgDist=document.getElementById("placeDistance");
-    mapImgDist.innerHTML=dist+"m from Wallabyyy<image id='gmapImg' src='Google-Maps-Symbol.png' alt='Google Maps Link'/>";
+    mapImgDist.innerHTML=dist+"m from Wallaby<image id='gmapImg' src='Google-Maps-Symbol.png' alt='Google Maps Link'/>";
     mapImgDist.setAttribute('transform',"translate(0,"+(imgRatio*125+40)+")");
     if(dist==0){
         mapImgDist.innerHTML="Not far at all";
@@ -649,3 +649,4 @@ function hidePlaceImg(){
     mapTextBG.style.display="none";
 
 }
+
