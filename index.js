@@ -614,9 +614,6 @@ function placeClick(place,imgRatio,name,nameWid,dist){
     mapImg.style.display="block";
     let mapImgBG=document.getElementById("placeImgBG");
     mapImgBG.style.display="block";
-    let gmap=document.getElementById("gmap");
-    gmap.setAttribute('href','Google-Maps-Symbol.png');
-    gmap.setAttribute('transform',"translate(0,"+(imgRatio*125+55)+")");
 
     let mapTextBG=document.getElementById("placeTextBG");
     mapTextBG.setAttribute('transform',"translate(0,"+(imgRatio*125)+")");
@@ -647,6 +644,6 @@ function hidePlaceImg(){
     mapImgName.style.display="none";
     let mapTextBG=document.getElementById("placeTextBG");
     mapTextBG.style.display="none";
-
 }
+
 
