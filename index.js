@@ -53,7 +53,7 @@ let selecting=false;
 let selected=false;
 
 function calculateLength(){
-    let len=((checkout.getTime()-checkin.getTime())/(1000*60*60*24)).round();
+    let len=Math.round((checkout.getTime()-checkin.getTime())/(1000*60*60*24));
     let stayLength=document.getElementById("stayLength");
     if(len==0){
         stayLength.innerHTML="0 days, 0 nights"
@@ -645,6 +645,7 @@ function hidePlaceImg(){
     let mapTextBG=document.getElementById("placeTextBG");
     mapTextBG.style.display="none";
 }
+
 
 
 
