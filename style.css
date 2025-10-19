@@ -179,7 +179,7 @@ main{
     }
     #calendar{
         -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
+        -ms-user-select: none; /* IE 10, 11 */
         user-select: none; /* Standard syntax */
         border:10px solid var(--green);
         border-radius:20px;
@@ -480,9 +480,11 @@ main{
     position:absolute;
     margin:0;
     padding:0 2px 1px 2px;
-    width:113px;
     display:none;
 }
+    .place rect{
+        width:113px;
+    }
 #gmapA{
     width:100px;
 }
@@ -726,6 +728,7 @@ footer{
     }
 
 }
+
 
 
 
